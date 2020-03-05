@@ -4,6 +4,6 @@ RUN apk update --no-cache && \
     apk add --no-cache git && \
     rm -rf /var/cache/apk/* && \
     go get -u github.com/gin-gonic/gin
-COPY ./app .
+COPY . .
 EXPOSE 8080
 CMD ["go","run","main.go"]

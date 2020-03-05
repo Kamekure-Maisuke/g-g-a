@@ -4,6 +4,6 @@ services:
     build: .
     tty: true
     volumes:
-      - ./app:/go/src/app
+      - .:/go/src/app
     ports:
       - 8080:8080
