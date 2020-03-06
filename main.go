@@ -1,6 +1,7 @@
 package main
 import (
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 func main() {
 	// route初期化
@@ -11,7 +12,7 @@ func main() {
 	data := "t-o-d"
 	// route設定
 	router.GET("/", func(ctx *gin.Context){
-		ctx.HTML(200, "index.html", gin.H{"data": data}) // dataをviewに渡す
+		ctx.HTML(http.StatusOK, "layout.html", gin.H{"data": data}) // dataをviewに渡す
 	})
 	// 起動
 	router.Run()
